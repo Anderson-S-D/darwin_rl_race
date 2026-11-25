@@ -1,0 +1,88 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/robotis/darwin-op/protos/RobotisOp2.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.09547930992425181 0.0006780898581098974 0.9954311837442772 3.1274538721906673
+  position 7.351898397404886 0.959043408607456 0.988210419228833
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 2.16 1.3 0
+  floorSize 5 4
+  wallHeight 0.3
+}
+RobotisOp2 {
+  translation 0 0 0.27
+  name "ppo"
+  controller "ppo"
+  controllerArgs [
+    ""
+  ]
+  supervisor TRUE
+  plasticColor 0 0.8 0.8
+  bodySlot [
+    DistanceSensor {
+      rotation 0 0 1 -0.35
+      name "ds_right"
+    }
+    DistanceSensor {
+      rotation 0 0 1 0.35
+      name "ds_left"
+    }
+    GPS {
+    }
+  ]
+}
+RobotisOp2 {
+  translation 0.1 2.33 0.28
+  name "dqn"
+  controller "dqn"
+  controllerArgs [
+    ""
+  ]
+  supervisor TRUE
+  plasticColor 0.8 0 0.8
+  bodySlot [
+    DistanceSensor {
+      rotation 0 0 1 -0.35
+      name "ds_right"
+    }
+    DistanceSensor {
+      rotation 0 0 1 0.35
+      name "ds_left"
+    }
+    GPS {
+    }
+  ]
+}
+RobotisOp2 {
+  translation 0.2 1.15 0.28
+  name "a2c"
+  controller "a2c"
+  controllerArgs [
+    ""
+  ]
+  supervisor TRUE
+  plasticColor 0.8 0.8 0
+  bodySlot [
+    DistanceSensor {
+      rotation 0 0 1 -0.35
+      name "ds_right"
+    }
+    DistanceSensor {
+      rotation 0 0 1 0.35
+      name "ds_left"
+    }
+    GPS {
+    }
+  ]
+}

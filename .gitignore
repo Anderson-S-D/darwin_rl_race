@@ -1,0 +1,39 @@
+# Entornos virtuales de Python
+venv/
+.venv/
+env/
+ENV/
+
+# Caché y archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Archivos de estado local y compilación de Webots
+worlds/.*.wbproj
+worlds/*.wbproj
+controllers/**/build/
+*.bak
+
+# Checkpoints intermedios de PyTorch (conserva los pesos finales ep250 y ep350)
+weights/*_ep50.pth
+weights/*_ep100.pth
+weights/*_ep150.pth
+weights/*_ep200.pth
+weights/*_ep300.pth
+# Si deseas excluir todos los pesos entrenados del repositorio, descomenta la siguiente línea:
+# weights/*.pth
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos del sistema operativo (Windows / macOS)
+Thumbs.db
+Desktop.ini
+.DS_Store
